@@ -48,15 +48,6 @@ export default class CheckBox extends Component {
         leftTextStyle: {},
         rightTextStyle: {}
     }
-
-    static getDerivedStateFromProps(nextProps, prevState) {
-        if (prevState.isChecked !== nextProps.isChecked) {
-            return {
-                isChecked: nextProps.isChecked
-            };
-        }
-        return null;
-    }
     onClick() {
         this.setState({
             isChecked: !this.state.isChecked
